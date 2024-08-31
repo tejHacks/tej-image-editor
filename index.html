@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A Web Based Image Editor to edit and create nice visuals for yourself.">
+    <meta name="keywords" content="Image Editor,IMage Editor JavaScript">
+    
+    <!-- ICONS AND THE STYLES FOR THE IMAGE EDITOR -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.css">
+    <link rel="stylesheet" href="boxicons/css/boxicons.min.css">
+</head>
+<body>
+  
+    
+    <div class="container disable">
+        <h2>Web Based Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <!-- Image editor Panel -->
+                <div class="filter">
+
+                <!-- Panel for the filters -->
+                 <label for="" class="title">Filters</label>
+                 <div class="options">
+                    <!-- Filter options -->
+                     <!-- 
+                    CSS Notes for Professionals Notes: Chapter 30: Found them inside and here they are:
+                    blur,brightness,contrast,drop-shadown,greyscale,hue-rotate,invert,opacity,saturate,sepia. -->
+                    <button id="brightness" class="active">Brightness</button>
+                    <button id="saturation">Saturation</button>
+                    <button id="inversion">Inversion</button>
+                    <button id="grayscale">Grayscale</button>
+                    <button id="blur-img">Blur</button>
+                    <button id="contrast-img">Contrast</button>
+                    <button id="hue-rotate">Hue-rotate</button>
+                    <button id="sepia">Sepia</button>
+                    <button id="opacity">Opacity</button>
+                 </div>
+
+                 <!-- Slider input for the editor and its effects on the image -->
+                 <div class="slider">
+                    <div class="filter-info">
+                        <p class="name">BRIGHTNESS</p>
+                            <p class="value">100%</p>
+                    </div>
+                    <input type="range" value="100" min="0" max="200">
+                 </div>
+             </div>
+             <!-- end of the filter container -->
+
+             <!-- Rotate Class Container to rotate and apply different forms of angular locomoton to the image -->
+             <div class="rotate">
+                <label class="title">Rotate & Flip</label>
+                <div class="options">
+                    <button id="left"><i class="fa fa-solid fa-rotate-left"></i></button>
+                    <button id="right"><i class="fa fa-solid fa-rotate-right"></i></button>
+                    <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                    <button id="vertical"><i class='bx bx-reflect-horizontal' ></i></button>
+                </div>
+            </div>
+            <div class="share">
+                <label class="title">SHARE IMAGE
+                </label>
+                    <div class="options">
+                   <a id="facebook" href="" title="Share to Facebook">   <i class="fa fa-facebook"></i> </a>
+                   <a id="whatsapp" href="" title="Share to WhatsApp">   <i class="fa fa-whatsapp"></i> </a>
+                   <a id="twitter" href="" title="Share to Twitter">   <i class="fa fa-twitter"></i> </a>
+                   <a id="pinterest" href="">   <i class="fa fa-pinterest"></i> </a>
+            </div>
+            </div>
+
+        </div>
+        <!-- end of the editor panel -->
+
+        <!-- Image Preview Block for previewing Images and all -->
+        <div class="preview-img">
+            <img title="Upload Image" src="image-placeholder.svg" id="image" alt="preview-img">
+        </div>
+        <!-- end of the image preview block -->
+    </div>
+    <!--  end of the wrapper class-->
+
+
+    <!-- CONTROL BUTTONS FOR THE ENTIRE PROCESS,SAVE,UPLOAD AND RESET YOUR IMAGE FILLTERS TOO -->
+     <div class="controls">
+        <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img" title="Choose Image">Choose Image</button>
+                <button class="save-img" title="Save Your Edits">Save Image <i class="fa fa-solid fa-arrow-down"></i></button>
+              
+            </div>
+     </div>
+</div>
+
+    <!-- SCRIPT SOURCE BELOW -->
+    <script src="script.js"></script>
+</body>
+</html>

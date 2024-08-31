@@ -1,0 +1,284 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* Don't mind me if Poppins doesnt work on your PC.its installed on mine and I use Ubuntu btw */
+/* here is a link to run the Poppins font on your PC
+/* Import Google font - Poppins 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*/
+
+body{
+  display: flex;
+  padding: 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #E3F2FD;
+}
+.container{
+  width: 850px;
+  padding: 30px 35px 35px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+/* Add opacity to the buttons */
+.container.disable .editor-panel,
+.container.disable .controls .reset-filter,
+.container.disable .controls .save-img{
+  opacity: 0.8;
+  pointer-events: none;
+}
+/* select the heading */
+.container h2{
+  margin-top: -8px;
+  font-size: 22px;
+  font-weight: 400;
+}
+/* select the editors wrapper container */
+.container .wrapper{
+  display: flex;
+  margin: 20px 0;
+  min-height: 345px;
+}
+/* the editor panel styles */
+.wrapper .editor-panel{
+  padding: 15px 20px;
+  width: 280px;
+  /* width: 300px; */
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+/* the editor title */
+.editor-panel .title{
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ccc;
+}
+/* select the buttons inside the editor panel and also the controls button too */
+.editor-panel .options, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+/* style the buttons in the editor panel class */
+
+.editor-panel button,.editor-panel a{
+  outline: none;
+  height: 40px;
+  font-size: 14px;
+  color: #6C757D;
+  background: #fff;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  border: 1px solid #aaa;
+}
+
+.editor-panel .filter button{
+  width: calc(100% / 2 - 4px);
+}
+/* more for the filter buttons */
+.editor-panel button:hover{
+  background: #f5f5f5;
+}
+.filter button.active{
+  color: #fff;
+  border-color: #5372F0;
+  background: #5372F0;
+}
+.filter button.active{
+  background: #5372F0;
+}
+
+
+/* touch the slider a bit */
+.filter .slider{
+  margin-top: 12px;
+}
+.filter .slider .filter-info{
+  display: flex;
+  color: #464646;
+  font-size: 14px;
+  justify-content: space-between;
+
+}
+.filter .slider input{
+  width: 100%;
+  height: 5px;
+  accent-color: #5372F0;
+}
+
+/* the rotate buttons styles */
+.editor-panel .rotate{
+  margin-top: 17px;
+}
+
+/* the rotate buttons */
+.editor-panel .rotate button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 4 - 3px);
+
+}
+/* style the rotate buttons */
+.rotate .options button:nth-child(1),
+.rotate .options button:nth-child(2),
+.rotate .options button:nth-child(3),
+.rotate .options button:nth-child(4){
+  font-size: 18px;
+}
+.rotate .options button:active{
+  color: #fff;
+  background: #5372F0;
+}
+
+/* style the share buttons */
+.rotate .share{
+  margin-top: 17px;
+}
+.editor-panel .share a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 4 - 3px);
+  text-decoration: none;
+}
+.share .options a:nth-child(1),
+.share .options a:nth-child(2),
+.share .options a:nth-child(3),
+.share .options a:nth-child(4){
+  font-size: 18px;
+  cursor: pointer;
+}
+.share .options a#facebook{
+  color: #fff;
+  background: #5372F0;
+  border-color: #5372F0;
+}
+.share .options a#facebook:hover{
+opacity: 0.78;
+cursor: pointer;
+}
+.share .options a#whatsapp:hover{
+  opacity: 0.78;
+  cursor: pointer;
+}
+.share .options a#twitter:hover{
+  opacity: 0.78;
+  cursor: pointer;
+}
+.share .options a#pinterest:hover{
+  opacity: 0.88;
+  cursor: pointer;
+
+  background: #7a0000;
+}
+
+.share .options a#whatsapp{
+  color: #fff;
+  background: #01682f;
+  border-color: #01682f;
+}.share .options a#twitter{
+  color: #fff;
+  background: #5372F0;
+  border-color: #5372F0;
+}.share .options a#pinterest{
+  color: #fff;
+  background: #ff0000;
+  border-color: #f60000;
+}
+
+/* style the preview image */
+.wrapper .preview-img{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 5px;
+align-items: center;
+justify-content: center;
+}
+.preview-img img{
+  max-width: 490px;
+  max-height: 335px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* the controls button */
+.controls button{
+  padding: 11px 20px;
+  font-size: 14px;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+/* the reset filters button */
+.controls .reset-filter{
+  color: #6C757D;
+  border: 1px solid #6C757D;
+}
+.controls .reset-filter:hover{
+  color: #fff;
+  background: #6a2a02;
+}
+
+/* choose image button */
+.controls .choose-img{
+  background: #6C757D;
+  border: 1px solid #6C757D;
+}
+.controls .choose-img:hover{
+  /* background: linear-gradient(to right, , #2576a1); */
+/* color: #fff; */
+border: 1.2px solid #25ab75;
+}
+.controls .save-img{
+  margin-left: 5px;
+  background: #5372F0;
+  border: 1px solid #5372F0;
+}
+
+/* responsive screen */
+
+@media screen and (max-width:760px) {
+  .container{
+    padding: 25px;
+  }
+  .container .wrapper{
+    gap: 20px;
+    /* apply spacing between the preview image and the controls block */
+    /* flex-wrap: wrap; use wrap-reverse to reverse the order of the arrangement */
+    flex-wrap: wrap-reverse; /*use wrap-reverse to reverse the order of the arrangement */
+  }
+  .wrapper .editor-panel{
+    width: 100%;
+    margin: 0 0 15px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .controls button{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .controls .row{
+    width: 100%;
+  }
+  .controls .row .save-img{
+    margin-left: 0px;
+  }
+}
